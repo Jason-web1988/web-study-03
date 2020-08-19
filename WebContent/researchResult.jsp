@@ -9,7 +9,7 @@
 <body>
 당신의 이름 			:		<b>${name }</b><br>
 당신의 성별	    	:		<b>${gender }</b><br>
-당신이 좋아하는 계절 	:		<b>${arrToSeasons}</b>
+당신이 좋아하는 계절 	:		<b>${season}</b>
 
 <br><br>
 

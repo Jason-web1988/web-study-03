@@ -36,27 +36,26 @@ public class ResearchServlet extends HttpServlet {
 		String gender = request.getParameter("gender");
 		String [] seasons = request.getParameterValues("season");
 		
-		if(seasons == null) {
-			seasons = new String[] {"좋아하는 계절 없음"};
-		}		
+//		if(seasons == null) {
+//			seasons = new String[] {"좋아하는 계절 없음"};
+//		}		
 		if(gender.equals("male")){
 			gender = "남자";			 
 		}else {
 			gender = "여자";
 		}
 		
-		for(String season : seasons) {
-			int s = Integer.parseInt(season);
-		String seasonRes="";{
+		String seasonRes = "";
+		for(String s : seasons) {			
 			switch(s) {
-			case 1 : seasonRes += "봄";break;
-			case 2 : seasonRes += "여름";break;
-			case 3 : seasonRes += "가을";break;
-			case 4 : seasonRes += "겨울";break;
+			case "1" : seasonRes += "봄";break;
+			case "2" : seasonRes += "여름";break;			
+			case "3" : seasonRes += "가을";break;
+			case "4" : seasonRes += "겨울";break;
 			}
 		}
 		
-	}
+	
 		request.setAttribute("name", name);
 		request.setAttribute("gender", gender);
 		request.setAttribute("season", seasonRes);
