@@ -30,7 +30,7 @@ public class fowardServlet extends HttpServlet {
 
 
 	private void processRequest(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		int age = Integer.parseInt(request.getParameter("age"));
+		int age = Integer.parseInt(request.getParameter("age").trim()+"");
 		
 				
 		if(age<=19) {
